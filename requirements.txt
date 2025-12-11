@@ -1,0 +1,12 @@
+# ACS Server with Auto SN Configuration
+# Core dependencies
+fastapi>=0.100.0
+uvicorn>=0.22.0
+defusedxml>=0.7.1
+httpx>=0.24.0
+
+# Optional - for development
+python-multipart>=0.0.6
+websockets>=11.0
+
+# Note: jinja2 is optional, HTML is embedded in the server

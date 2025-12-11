@@ -1,0 +1,26 @@
+{
+  "description": "SN Registry - Maps serial numbers to configurations",
+  "version": "1.0",
+  "default_template": "standard_unlock",
+  "devices": {
+    "EXAMPLE123456": {
+      "name": "Example Device",
+      "template": "standard_unlock",
+      "enabled": true,
+      "custom_params": {},
+      "notes": "Example device entry"
+    }
+  },
+  "sn_patterns": [
+    {
+      "pattern": "^48575.*",
+      "template": "huawei_hg8145",
+      "description": "Huawei HG8145 series"
+    },
+    {
+      "pattern": "^.*$",
+      "template": "standard_unlock",
+      "description": "Default fallback"
+    }
+  ]
+}

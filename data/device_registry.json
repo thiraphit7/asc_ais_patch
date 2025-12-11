@@ -1,0 +1,5 @@
+{
+  "description": "Device Registry - Stores device information and status",
+  "version": "1.0",
+  "devices": {}
+}

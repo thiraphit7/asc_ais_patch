@@ -1,0 +1,70 @@
+{
+  "name": "Full Unlock with SuperAdmin",
+  "description": "Complete unlock sequence with SuperAdmin user configuration",
+  "version": "1.0",
+  "sequences": [
+    {
+      "name": "disable_captcha",
+      "description": "Disable captcha verification",
+      "params": [
+        {
+          "Name": "InternetGatewayDevice.UserInterface.X_AIS_WebUserInfo.Captcha_enable",
+          "Value": "0",
+          "Type": "xsd:string"
+        }
+      ]
+    },
+    {
+      "name": "disable_superadmin_security",
+      "description": "Disable SuperAdmin security restrictions",
+      "params": [
+        {
+          "Name": "InternetGatewayDevice.UserInterface.X_AIS_WebUserInfo.SuperAdminSecurity",
+          "Value": "0",
+          "Type": "xsd:string"
+        }
+      ]
+    },
+    {
+      "name": "enable_remote_access",
+      "description": "Enable remote web access",
+      "params": [
+        {
+          "Name": "InternetGatewayDevice.UserInterface.X_AIS_WebUserInfo.RemoteAccess",
+          "Value": "1",
+          "Type": "xsd:string"
+        }
+      ]
+    },
+    {
+      "name": "disable_carrier_lock",
+      "description": "Disable carrier locking",
+      "params": [
+        {
+          "Name": "InternetGatewayDevice.UserInterface.CarrierLocking.X_AIS_LockingEnable",
+          "Value": "0",
+          "Type": "xsd:string"
+        }
+      ]
+    }
+  ],
+  "superadmin": {
+    "enabled": true,
+    "params": [
+      {
+        "Name": "InternetGatewayDevice.UserInterface.X_AIS_WebUserInfo.SuperAdminName",
+        "Value": "superadmin",
+        "Type": "xsd:string"
+      },
+      {
+        "Name": "InternetGatewayDevice.UserInterface.X_AIS_WebUserInfo.SuperAdminPassword",
+        "Value": "Ais@SuperAdmin",
+        "Type": "xsd:string"
+      }
+    ]
+  },
+  "wifi_config": {
+    "enabled": false,
+    "params": []
+  }
+}
