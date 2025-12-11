@@ -1,0 +1,54 @@
+{
+  "name": "Standard Unlock Template",
+  "description": "Standard unlock sequence for Huawei devices",
+  "version": "1.0",
+  "sequences": [
+    {
+      "name": "unlock_ui",
+      "description": "Disable UI restrictions",
+      "params": [
+        {
+          "Name": "InternetGatewayDevice.UserInterface.X_AIS_WebUserInfo.Captcha_enable",
+          "Value": "0",
+          "Type": "xsd:string"
+        },
+        {
+          "Name": "InternetGatewayDevice.UserInterface.X_AIS_WebUserInfo.SuperAdminSecurity",
+          "Value": "0",
+          "Type": "xsd:string"
+        },
+        {
+          "Name": "InternetGatewayDevice.UserInterface.X_AIS_WebUserInfo.RemoteAccess",
+          "Value": "1",
+          "Type": "xsd:string"
+        }
+      ]
+    },
+    {
+      "name": "unlock_carrier",
+      "description": "Disable carrier locking",
+      "params": [
+        {
+          "Name": "InternetGatewayDevice.UserInterface.CarrierLocking.X_AIS_LockingEnable",
+          "Value": "0",
+          "Type": "xsd:string"
+        }
+      ]
+    }
+  ],
+  "superadmin": {
+    "enabled": true,
+    "params": [
+      {
+        "Name": "InternetGatewayDevice.UserInterface.X_AIS_WebUserInfo.SuperAdminName",
+        "Value": "superadmin",
+        "Type": "xsd:string"
+      },
+      {
+        "Name": "InternetGatewayDevice.UserInterface.X_AIS_WebUserInfo.SuperAdminPassword",
+        "Value": "Ais@SuperAdmin",
+        "Type": "xsd:string"
+      }
+    ]
+  }
+}

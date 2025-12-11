@@ -1,0 +1,44 @@
+{
+  "description": "Device Registry - Stores device information and status",
+  "version": "1.0",
+  "devices": {
+    "48575443TEST1234": {
+      "oui": "48575443",
+      "product_class": "HG8145B7N",
+      "vendor": "Huawei",
+      "software_version": "V5R022C10S130",
+      "hardware_version": "1.0",
+      "wan_ip": "192.168.1.100",
+      "mac_address": "?",
+      "connection_url": "?",
+      "first_seen": "2025-12-11T12:57:18.284851",
+      "last_seen": "2025-12-11T12:57:18.285749",
+      "status": "unlocking",
+      "unlock_progress": 0,
+      "config_applied": false,
+      "events": [
+        "[2025-12-11 12:57:18] Inform received: 0 BOOTSTRAP"
+      ]
+    },
+    "48575443DEMO9999": {
+      "oui": "48575443",
+      "product_class": "HG8145B7N",
+      "vendor": "Huawei",
+      "software_version": "V5R022C10S130",
+      "hardware_version": "?",
+      "wan_ip": "?",
+      "mac_address": "?",
+      "connection_url": "?",
+      "first_seen": "2025-12-11T13:00:13.305390",
+      "last_seen": "2025-12-11T13:00:13.312442",
+      "status": "unlocking",
+      "unlock_progress": 40,
+      "config_applied": false,
+      "events": [
+        "[2025-12-11 13:00:13] Inform received: 0 BOOTSTRAP",
+        "[2025-12-11 13:00:13] Unlock progress: 20%",
+        "[2025-12-11 13:00:13] Unlock progress: 40%"
+      ]
+    }
+  }
+}
