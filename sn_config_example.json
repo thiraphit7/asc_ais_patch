@@ -1,0 +1,81 @@
+{
+  "templates": [
+    {
+      "name": "huawei_ais_unlock",
+      "description": "Unlock UI, Captcha, and Carrier for Huawei AIS devices",
+      "params": [
+        {"Name": "InternetGatewayDevice.UserInterface.X_AIS_WebUserInfo.Captcha_enable", "Value": "0", "Type": "xsd:string"},
+        {"Name": "InternetGatewayDevice.UserInterface.X_AIS_WebUserInfo.SuperAdminSecurity", "Value": "0", "Type": "xsd:string"},
+        {"Name": "InternetGatewayDevice.UserInterface.X_AIS_WebUserInfo.RemoteAccess", "Value": "1", "Type": "xsd:string"},
+        {"Name": "InternetGatewayDevice.UserInterface.CarrierLocking.X_AIS_LockingEnable", "Value": "0", "Type": "xsd:string"}
+      ]
+    },
+    {
+      "name": "wifi_basic",
+      "description": "Basic WiFi configuration template",
+      "params": [
+        {"Name": "InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.Enable", "Value": "true", "Type": "xsd:boolean"},
+        {"Name": "InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.BeaconType", "Value": "WPA2", "Type": "xsd:string"}
+      ]
+    },
+    {
+      "name": "remote_access",
+      "description": "Enable remote management access",
+      "params": [
+        {"Name": "InternetGatewayDevice.UserInterface.X_AIS_WebUserInfo.RemoteAccess", "Value": "1", "Type": "xsd:string"},
+        {"Name": "InternetGatewayDevice.ManagementServer.PeriodicInformEnable", "Value": "true", "Type": "xsd:boolean"},
+        {"Name": "InternetGatewayDevice.ManagementServer.PeriodicInformInterval", "Value": "3600", "Type": "xsd:unsignedInt"}
+      ]
+    }
+  ],
+  "configs": [
+    {
+      "sn": "48575443D89A1234",
+      "description": "Specific device configuration",
+      "template": "huawei_ais_unlock",
+      "params": [
+        {"Name": "InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.SSID", "Value": "MyNetwork_1234", "Type": "xsd:string"}
+      ],
+      "one_time": true,
+      "enabled": true
+    },
+    {
+      "sn": "48575443D89A5678",
+      "description": "Another specific device",
+      "template": "huawei_ais_unlock",
+      "params": [
+        {"Name": "InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.SSID", "Value": "MyNetwork_5678", "Type": "xsd:string"}
+      ],
+      "one_time": true,
+      "enabled": true
+    },
+    {
+      "sn_pattern": "48575443*",
+      "description": "All Huawei devices starting with 48575443",
+      "template": "huawei_ais_unlock",
+      "params": [],
+      "one_time": true,
+      "enabled": true
+    },
+    {
+      "sn_pattern": "HG8145*",
+      "description": "All HG8145 series devices",
+      "params": [
+        {"Name": "InternetGatewayDevice.UserInterface.X_AIS_WebUserInfo.Captcha_enable", "Value": "0", "Type": "xsd:string"},
+        {"Name": "InternetGatewayDevice.UserInterface.X_AIS_WebUserInfo.SuperAdminSecurity", "Value": "0", "Type": "xsd:string"}
+      ],
+      "one_time": true,
+      "enabled": true
+    },
+    {
+      "sn": "*",
+      "description": "Default configuration for all devices (fallback)",
+      "params": [
+        {"Name": "InternetGatewayDevice.ManagementServer.PeriodicInformEnable", "Value": "true", "Type": "xsd:boolean"},
+        {"Name": "InternetGatewayDevice.ManagementServer.PeriodicInformInterval", "Value": "86400", "Type": "xsd:unsignedInt"}
+      ],
+      "one_time": false,
+      "enabled": false
+    }
+  ]
+}
