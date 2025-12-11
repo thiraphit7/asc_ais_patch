@@ -86,7 +86,7 @@ class Settings:
     enable_web_dashboard: bool = True
     auto_unlock: bool = True
     auto_superadmin: bool = True
-    staged_unlock: bool = True  # Send params in stages vs all at once
+    staged_unlock: bool = False  # Default: send all params at once
 
 
 # =========================
@@ -121,7 +121,7 @@ def parse_args() -> Settings:
     aa("--disable-web-dashboard", action="store_true")
     aa("--disable-auto-unlock", action="store_true")
     aa("--disable-auto-superadmin", action="store_true")
-    aa("--all-at-once", action="store_true", help="Send all params at once instead of staged")
+    aa("--staged", action="store_true", help="Send params in stages instead of all at once")
 
     ns = p.parse_args()
 
@@ -142,7 +142,7 @@ def parse_args() -> Settings:
         enable_web_dashboard=not ns.disable_web_dashboard,
         auto_unlock=not ns.disable_auto_unlock,
         auto_superadmin=not ns.disable_auto_superadmin,
-        staged_unlock=not ns.all_at_once,
+        staged_unlock=ns.staged,
     )
 
 

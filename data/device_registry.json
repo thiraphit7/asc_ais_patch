@@ -39,6 +39,78 @@
         "[2025-12-11 13:00:13] Unlock progress: 20%",
         "[2025-12-11 13:00:13] Unlock progress: 40%"
       ]
+    },
+    "48575443ALLINONE": {
+      "oui": "48575443",
+      "product_class": "HG8145B7N",
+      "vendor": "Huawei",
+      "software_version": "V5R022C10S130",
+      "hardware_version": "?",
+      "wan_ip": "?",
+      "mac_address": "?",
+      "connection_url": "?",
+      "first_seen": "2025-12-11T13:16:34.248713",
+      "last_seen": "2025-12-11T13:16:34.249626",
+      "status": "unlocking",
+      "unlock_progress": 0,
+      "config_applied": false,
+      "events": [
+        "[2025-12-11 13:16:34] Inform received: 0 BOOTSTRAP"
+      ]
+    },
+    "48575443TEST0001": {
+      "oui": "48575443",
+      "product_class": "HG8145B7N",
+      "vendor": "Huawei",
+      "software_version": "?",
+      "hardware_version": "?",
+      "wan_ip": "?",
+      "mac_address": "?",
+      "connection_url": "?",
+      "first_seen": "2025-12-11T13:16:55.278898",
+      "last_seen": "2025-12-11T13:16:55.279920",
+      "status": "unlocking",
+      "unlock_progress": 0,
+      "config_applied": false,
+      "events": [
+        "[2025-12-11 13:16:55] Inform received: 0 BOOTSTRAP"
+      ]
+    },
+    "48575443FULLTEST": {
+      "oui": "48575443",
+      "product_class": "HG8145B7N",
+      "vendor": "Huawei",
+      "software_version": "?",
+      "hardware_version": "?",
+      "wan_ip": "?",
+      "mac_address": "?",
+      "connection_url": "?",
+      "first_seen": "2025-12-11T13:17:18.109496",
+      "last_seen": "2025-12-11T13:17:18.110385",
+      "status": "unlocking",
+      "unlock_progress": 0,
+      "config_applied": false,
+      "events": [
+        "[2025-12-11 13:17:18] Inform received: 0 BOOTSTRAP"
+      ]
+    },
+    "48575443FINAL": {
+      "oui": "48575443",
+      "product_class": "HG8145B7N",
+      "vendor": "Huawei",
+      "software_version": "?",
+      "hardware_version": "?",
+      "wan_ip": "?",
+      "mac_address": "?",
+      "connection_url": "?",
+      "first_seen": "2025-12-11T13:17:34.510813",
+      "last_seen": "2025-12-11T13:17:34.511709",
+      "status": "unlocking",
+      "unlock_progress": 0,
+      "config_applied": false,
+      "events": [
+        "[2025-12-11 13:17:34] Inform received: 0 BOOTSTRAP"
+      ]
     }
   }
 }
