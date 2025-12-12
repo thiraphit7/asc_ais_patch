@@ -49,19 +49,8 @@
     }
   ],
   "superadmin": {
-    "enabled": true,
-    "params": [
-      {
-        "Name": "InternetGatewayDevice.UserInterface.X_AIS_WebUserInfo.SuperAdminName",
-        "Value": "superadmin",
-        "Type": "xsd:string"
-      },
-      {
-        "Name": "InternetGatewayDevice.UserInterface.X_AIS_WebUserInfo.SuperAdminPassword",
-        "Value": "Ais@SuperAdmin",
-        "Type": "xsd:string"
-      }
-    ]
+    "enabled": false,
+    "params": []
   },
   "wifi_config": {
     "enabled": false,
